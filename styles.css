@@ -364,6 +364,8 @@ img, video { display: block; max-width: 100%; }
 .contact__sub { position: relative; color: rgba(220, 236, 255, 0.8); margin-bottom: 2.2rem; }
 .contact .btn { position: relative; }
 .contact__handle { position: relative; margin-top: 1.8rem; color: var(--sky); font-weight: 600; letter-spacing: 0.05em; }
+.contact__handle a { color: inherit; text-decoration: none; }
+.contact__handle a:hover { text-decoration: underline; }
 
 /* FOOTER */
 .footer {
