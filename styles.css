@@ -179,9 +179,9 @@ img, video { display: block; max-width: 100%; }
   gap: 0.9rem;
 }
 .hero__img {
-  flex: 0 1 160px;
+  flex: 0 1 200px;
   min-width: 0;
-  max-width: 160px;
+  max-width: 200px;
   width: 100%;
   border-radius: 18px;
   box-shadow: 0 26px 55px -20px rgba(0, 0, 0, 0.6);
