@@ -61,31 +61,31 @@
       <div class="grid">
         <figure class="phone-card">
           <div class="phone"><span class="phone__island"></span>
-            <div class="phone__screen"><video src="assets/personal/clip5.mp4#t=0.1" muted loop playsinline controls preload="metadata"></video></div>
+            <div class="phone__screen"><video src="assets/personal/clip5.mp4#t=0.1" loop playsinline controls preload="metadata"></video></div>
           </div>
           <figcaption>Personal reel</figcaption>
         </figure>
         <figure class="phone-card">
           <div class="phone"><span class="phone__island"></span>
-            <div class="phone__screen"><video src="assets/personal/clip2.mp4#t=0.1" muted loop playsinline controls preload="metadata"></video></div>
+            <div class="phone__screen"><video src="assets/personal/clip2.mp4#t=0.1" loop playsinline controls preload="metadata"></video></div>
           </div>
           <figcaption>Personal reel</figcaption>
         </figure>
         <figure class="phone-card">
           <div class="phone"><span class="phone__island"></span>
-            <div class="phone__screen"><video src="assets/personal/clip3.mp4#t=0.1" muted loop playsinline controls preload="metadata"></video></div>
+            <div class="phone__screen"><video src="assets/personal/clip3.mp4#t=0.1" loop playsinline controls preload="metadata"></video></div>
           </div>
           <figcaption>Personal reel</figcaption>
         </figure>
         <figure class="phone-card">
           <div class="phone"><span class="phone__island"></span>
-            <div class="phone__screen"><video src="assets/personal/clip4.mp4#t=0.1" muted loop playsinline controls preload="metadata"></video></div>
+            <div class="phone__screen"><video src="assets/personal/clip4.mp4#t=0.1" loop playsinline controls preload="metadata"></video></div>
           </div>
           <figcaption>Personal reel</figcaption>
         </figure>
         <figure class="phone-card">
           <div class="phone"><span class="phone__island"></span>
-            <div class="phone__screen"><video src="assets/personal/clip1.mov#t=0.1" muted loop playsinline controls preload="metadata"></video></div>
+            <div class="phone__screen"><video src="assets/personal/clip1.mov#t=0.1" loop playsinline controls preload="metadata"></video></div>
           </div>
           <figcaption>Personal reel</figcaption>
         </figure>
@@ -115,43 +115,43 @@
       <div class="grid">
         <figure class="phone-card">
           <div class="phone"><span class="phone__island"></span>
-            <div class="phone__screen"><video src="assets/college/college2.mp4#t=0.1" muted loop playsinline controls preload="metadata"></video></div>
+            <div class="phone__screen"><video src="assets/college/college2.mp4#t=0.1" loop playsinline controls preload="metadata"></video></div>
           </div>
           <figcaption>College reel</figcaption>
         </figure>
         <figure class="phone-card">
           <div class="phone"><span class="phone__island"></span>
-            <div class="phone__screen"><video src="assets/college/college3.mp4#t=0.1" muted loop playsinline controls preload="metadata"></video></div>
+            <div class="phone__screen"><video src="assets/college/college3.mp4#t=0.1" loop playsinline controls preload="metadata"></video></div>
           </div>
           <figcaption>College reel</figcaption>
         </figure>
         <figure class="phone-card">
           <div class="phone"><span class="phone__island"></span>
-            <div class="phone__screen"><video src="assets/college/college4.mp4#t=0.1" muted loop playsinline controls preload="metadata"></video></div>
+            <div class="phone__screen"><video src="assets/college/college4.mp4#t=0.1" loop playsinline controls preload="metadata"></video></div>
           </div>
           <figcaption>College reel</figcaption>
         </figure>
         <figure class="phone-card">
           <div class="phone"><span class="phone__island"></span>
-            <div class="phone__screen"><video src="assets/college/college5.mp4#t=0.1" muted loop playsinline controls preload="metadata"></video></div>
+            <div class="phone__screen"><video src="assets/college/college5.mp4#t=0.1" loop playsinline controls preload="metadata"></video></div>
           </div>
           <figcaption>College reel</figcaption>
         </figure>
         <figure class="phone-card">
           <div class="phone"><span class="phone__island"></span>
-            <div class="phone__screen"><video src="assets/college/college6.mp4#t=0.1" muted loop playsinline controls preload="metadata"></video></div>
+            <div class="phone__screen"><video src="assets/college/college6.mp4#t=0.1" loop playsinline controls preload="metadata"></video></div>
           </div>
           <figcaption>College reel</figcaption>
         </figure>
         <figure class="phone-card">
           <div class="phone"><span class="phone__island"></span>
-            <div class="phone__screen"><video src="assets/college/college7.mp4#t=0.1" muted loop playsinline controls preload="metadata"></video></div>
+            <div class="phone__screen"><video src="assets/college/college7.mp4#t=0.1" loop playsinline controls preload="metadata"></video></div>
           </div>
           <figcaption>College reel</figcaption>
         </figure>
         <figure class="phone-card">
           <div class="phone"><span class="phone__island"></span>
-            <div class="phone__screen"><video src="assets/college/college8.mp4#t=0.1" muted loop playsinline controls preload="metadata"></video></div>
+            <div class="phone__screen"><video src="assets/college/college8.mp4#t=0.1" loop playsinline controls preload="metadata"></video></div>
           </div>
           <figcaption>College reel</figcaption>
         </figure>
@@ -182,10 +182,13 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Play portfolio videos on hover, pause on leave
+    // Pause other portfolio videos when one starts (so only one plays at a time)
     document.querySelectorAll('.phone-card video').forEach(function (v) {
-      v.addEventListener('mouseenter', function () { v.play(); });
-      v.addEventListener('mouseleave', function () { v.pause(); });
+      v.addEventListener('play', function () {
+        document.querySelectorAll('.phone-card video').forEach(function (o) {
+          if (o !== v) { o.pause(); }
+        });
+      });
     });
 
     // Portfolio tabs
