@@ -160,10 +160,10 @@
 
     <!-- INDEPENDENT -->
     <div class="tab-panel" id="tab-independent" role="tabpanel" aria-labelledby="tabbtn-independent" hidden>
-      <div class="grid">
-        <figure class="phone-card">
-          <div class="phone"><span class="phone__island"></span>
-            <div class="phone__screen"><video src="assets/independent/independent1.mp4#t=0.1" loop playsinline controls preload="metadata"></video></div>
+      <div class="grid grid--tablet">
+        <figure class="tablet-card">
+          <div class="tablet"><span class="tablet__camera"></span>
+            <div class="tablet__screen"><video src="assets/independent/independent1.mp4#t=0.1" loop playsinline controls preload="metadata"></video></div>
           </div>
           <figcaption>Consumer Behavior</figcaption>
         </figure>
@@ -190,9 +190,9 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Pause other portfolio videos when one starts (so only one plays at a time)
-    document.querySelectorAll('.phone-card video').forEach(function (v) {
+    document.querySelectorAll('.portfolio video').forEach(function (v) {
       v.addEventListener('play', function () {
-        document.querySelectorAll('.phone-card video').forEach(function (o) {
+        document.querySelectorAll('.portfolio video').forEach(function (o) {
           if (o !== v) { o.pause(); }
         });
       });
