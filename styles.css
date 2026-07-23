@@ -219,33 +219,61 @@ img, video { display: block; max-width: 100%; }
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-  max-width: 720px;
+  gap: clamp(1.5rem, 4vw, 2.6rem);
+  max-width: 780px;
   margin: 0 auto;
+  justify-items: center;
 }
-.card {
+.phone-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+/* iPhone mockup */
+.phone {
   position: relative;
-  height: 300px;
-  border-radius: var(--radius);
+  width: 210px;
+  aspect-ratio: 9 / 19.5;
+  background: #0a0a0f;
+  border-radius: 34px;
+  padding: 9px;
+  box-shadow:
+    0 0 0 2px #2a2f3a,
+    0 22px 45px -18px rgba(10, 31, 68, 0.6);
+  transition: transform 0.35s ease;
+}
+.phone:hover { transform: translateY(-6px); }
+.phone__island {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 62px;
+  height: 18px;
+  background: #0a0a0f;
+  border-radius: 12px;
+  z-index: 2;
+}
+.phone__screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 26px;
   overflow: hidden;
-  box-shadow: var(--shadow);
   background: var(--navy);
 }
-.card img, .card video {
+.phone__screen img,
+.phone__screen video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
 }
-.card:hover img { transform: scale(1.04); }
-.card figcaption {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  padding: 1.4rem 1.2rem 1rem;
-  color: var(--white);
-  font-size: 0.9rem;
+.phone-card figcaption {
+  color: var(--muted);
+  font-size: 0.88rem;
   font-weight: 500;
-  background: linear-gradient(transparent, rgba(6, 15, 36, 0.85));
+  text-align: center;
 }
 .portfolio__note { text-align: center; color: var(--muted); margin-top: 2rem; font-style: italic; }
 

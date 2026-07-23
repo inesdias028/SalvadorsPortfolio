@@ -85,16 +85,31 @@
       <h2 class="section__title">Portfolio</h2>
     </div>
     <div class="grid reveal">
-      <figure class="card card--tall">
-        <video src="assets/salvi2.mp4" muted loop playsinline controls preload="metadata"></video>
+      <figure class="phone-card">
+        <div class="phone">
+          <span class="phone__island"></span>
+          <div class="phone__screen">
+            <video src="assets/salvi2.mp4" muted loop playsinline controls preload="metadata"></video>
+          </div>
+        </div>
         <figcaption>Travel reel &middot; Short-form video</figcaption>
       </figure>
-      <figure class="card">
-        <img src="assets/salvi1.jpeg" alt="Content from Saigon, Vietnam" loading="lazy" />
+      <figure class="phone-card">
+        <div class="phone">
+          <span class="phone__island"></span>
+          <div class="phone__screen">
+            <img src="assets/salvi1.jpeg" alt="Content from Saigon, Vietnam" />
+          </div>
+        </div>
         <figcaption>Saigon, Vietnam &middot; In-person content</figcaption>
       </figure>
-      <figure class="card">
-        <img src="assets/salvi3.jpeg" alt="Content from Andong, Korea" loading="lazy" />
+      <figure class="phone-card">
+        <div class="phone">
+          <span class="phone__island"></span>
+          <div class="phone__screen">
+            <img src="assets/salvi3.jpeg" alt="Content from Andong, Korea" />
+          </div>
+        </div>
         <figcaption>Andong, Korea &middot; Lifestyle</figcaption>
       </figure>
     </div>
@@ -150,7 +165,7 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Play portfolio videos on hover, pause on leave
-    document.querySelectorAll('.card video').forEach(function (v) {
+    document.querySelectorAll('.phone-card video').forEach(function (v) {
       v.addEventListener('mouseenter', function () { v.play(); });
       v.addEventListener('mouseleave', function () { v.pause(); });
     });
