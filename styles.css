@@ -175,17 +175,19 @@ img, video { display: block; max-width: 100%; }
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 0.9rem;
 }
 .hero__img {
-  flex: 1 1 0;
+  flex: 0 1 160px;
   min-width: 0;
+  max-width: 160px;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 18px;
   box-shadow: 0 26px 55px -20px rgba(0, 0, 0, 0.6);
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  border: 6px solid var(--white);
+  border: 5px solid var(--white);
   transition: transform 0.35s ease;
 }
 .hero__img--1 { transform: rotate(-2deg); }
