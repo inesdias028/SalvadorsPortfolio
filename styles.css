@@ -179,9 +179,9 @@ img, video { display: block; max-width: 100%; }
   gap: 0.9rem;
 }
 .hero__img {
-  flex: 0 1 200px;
+  flex: 0 1 240px;
   min-width: 0;
-  max-width: 200px;
+  max-width: 240px;
   width: 100%;
   border-radius: 18px;
   box-shadow: 0 26px 55px -20px rgba(0, 0, 0, 0.6);
@@ -384,9 +384,8 @@ img, video { display: block; max-width: 100%; }
   .nav__links { gap: 1rem; }
   .hero { min-height: auto; }
   .hero__grid { grid-template-columns: 1fr; }
-  .hero__media { flex-direction: row; margin-top: 1rem; }
-  .hero__img { aspect-ratio: 4 / 5; }
-  .hero__img--2 { width: 100%; }
+  .hero__media { flex-direction: row; justify-content: center; margin-top: 1.4rem; }
+  .hero__img { flex: 1 1 0; max-width: 46%; aspect-ratio: 3 / 4; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
   .services__grid { grid-template-columns: repeat(2, 1fr); }
 }
