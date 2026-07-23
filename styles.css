@@ -255,8 +255,8 @@ img, video { display: block; max-width: 100%; }
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1.5rem, 5vw, 4rem);
-  max-width: 1160px;
+  gap: clamp(1.5rem, 4vw, 2.8rem);
+  max-width: 980px;
   margin: 0 auto;
 }
 .phone-card {
@@ -271,7 +271,7 @@ img, video { display: block; max-width: 100%; }
 .phone {
   position: relative;
   width: 100%;
-  max-width: 320px;
+  max-width: 280px;
   aspect-ratio: 9 / 19.5;
   background: #0a0a0f;
   border-radius: 34px;
