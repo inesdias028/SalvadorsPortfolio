@@ -299,13 +299,13 @@ img, video { display: block; max-width: 100%; }
   height: 100%;
   border-radius: 26px;
   overflow: hidden;
-  background: var(--navy);
+  background: #000;
 }
 .phone__screen img,
 .phone__screen video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .phone-card figcaption {
   color: var(--muted);
